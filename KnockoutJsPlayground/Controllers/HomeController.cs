@@ -1,4 +1,6 @@
-﻿using System;
+﻿using KnockoutJsPlayground.ViewModels;
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,7 +12,11 @@ namespace KnockoutJsPlayground.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var HomeVm = new HomeViewModel();
+            HomeVm.Firstname = "firstname";
+            
+            HomeVm.Lastname = "Lastname"
+;            return View(HomeVm);
         }
 
         public ActionResult About()

@@ -14,9 +14,11 @@ namespace KnockoutJsPlayground.Controllers
         {
             var HomeVm = new HomeViewModel();
             HomeVm.Firstname = "firstname";
-            
-            HomeVm.Lastname = "Lastname"
-;            return View(HomeVm);
+
+            HomeVm.Lastname = "Lastname";
+            HomeVm.Weapons.Add(new WeaponViewModel { Id = 1, Name = "test" });
+                
+            return View(HomeVm);
         }
 
         public ActionResult About()
